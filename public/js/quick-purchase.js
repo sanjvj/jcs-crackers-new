@@ -483,8 +483,8 @@ new Vue({
                     this.orderDetails.prize = '';
                 }
 
-                // Generate and download PDF before dialog
-                this.generateOrderPDF();
+                // Remove PDF generation call
+                // this.generateOrderPDF();
                 this.saveOrderToSheets(this.orderDetails)
                 this.saveLastBillNumberToSheets(this.orderDetails)
                 this.sendEnquiryPlacedMails();
@@ -598,6 +598,7 @@ new Vue({
                   }
                   .header h2 {
                     font-size: 16px;
+                    color: #333;
                     margin: 5px 0;
                   }
                   .header p {
@@ -676,8 +677,8 @@ new Vue({
                   }
                 </style>
               </head>
-              <body style="font-family: Arial, sans-serif;background: #fff;padding:0px;color: #333;">
-                <div class="container" style="max-width: 750px;margin: 0 auto;">
+              <body>
+                <div class="container">
                   <!-- Header -->
                   <div class="header" style="text-align: center;">
                     <h1 style="font-size: 20px;color: #31018a;margin: 5px 0;">ESTIMATE</h1>
@@ -762,9 +763,6 @@ new Vue({
                 this.setDefaultSpinPercentage();
 
               const sendMailOverHTTP = firebase.app().functions('us-central1').httpsCallable('sendMailOverHTTP');
-              
-              const pdfFile = this.generateMailPDF();
-
               let fromEmail = `Cloud Cerebro <cloudcerebro.dev.09.2020@gmail.com>`;
               let vendorEmail = VENDOR_EMAIL;
           
@@ -772,24 +770,14 @@ new Vue({
                 fromEmail,
                 toEmail: vendorEmail,
                 subject: `Enquiry from ${order.email}`,
-                body: mailBody,
-                attachments: []
+                body: mailBody
               };
           
               const userMail = {
                 fromEmail,
                 toEmail: order.email,
                 subject: `Enquiry placed in JCS Crackers`,
-                body: mailBody,
-                  attachments: [
-                    {
-                      filename: `JCSCrackers_Estimate_${
-                        order.billNumber || "enquiry"
-                      }.pdf`,
-                      content: pdfFile,
-                      encoding: "base64",
-                    },
-                  ],
+                body: mailBody
               };
           
               sendMailOverHTTP(vendorMail)
