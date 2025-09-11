@@ -1223,6 +1223,27 @@
         
     </style>
 
+
+<!-- Instruction Popup (Place this above the spin wheel container) -->
+<div class="instruction-popup" v-if="showInstructionPopup" @click="closeInstructionPopup">
+  <div class="popup-content" @click.stop>
+    <h2>Important Notice</h2>
+    <p>
+      As per the Hon’ble High Court order, direct online sale of crackers is strictly prohibited and punishable by law.
+      This website is provided primarily for enquiry purposes. Customers may check product details, availability, and price range.
+      Customers may submit an enquiry form through this website. If the customer agrees, the enquiry can be converted into an order as per their interest, subject to applicable laws and regulations.
+      This website does not provide an instant online purchase or checkout system. Any payment or order process will be handled only after customer confirmation.
+      Our JCS Shop strictly follows all protocols and is 100% compliant with legal and statutory requirements as per the Explosives Act.
+      All parcels are dispatched only through registered and legally authorized transport service providers.
+    </p>
+    <p>
+      ✅ By clicking “I Understand”, you acknowledge and agree to these terms before proceeding to make an enquiry.
+    </p>
+    <button @click="proceedToSpinWheel">I Understand</button>
+  </div>
+</div>
+
+
     <!-- Spin start  -->
 
 

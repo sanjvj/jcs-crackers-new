@@ -13,6 +13,7 @@ new Vue({
     data: function () {
 
         return {
+          showInstructionPopup: true,
       segments: [
         { id: "segment_1", percent: 10, start: 0, end: 36, name: "Get 5% Off" },
         { id: "segment_2", percent: 8, start: 36, end: 72, name: "Get 30 Shot as free" },
@@ -175,6 +176,8 @@ new Vue({
         },
     },
     async mounted() {
+      this.showSpinWheel = false; // Initially hide the spin wheel
+    this.showInstructionPopup = true; // Show the instruction popup
         await updateShopOpen();
         if (!SHOP_OPEN) {
             window.location.href = 'index.html'
@@ -194,6 +197,15 @@ new Vue({
     },
     methods: {
 
+        closeInstructionPopup() {
+        this.showInstructionPopup = false;
+        this.showSpinWheel = true; // Show the spin wheel after closing the popup
+    },
+
+    // Proceed to the spin wheel when the button is clicked
+    proceedToSpinWheel() {
+        this.closeInstructionPopup(); // Close the popup
+    },
         
         async getCurrentSegmentName() {
           return new Promise(async (resolve, reject) => {

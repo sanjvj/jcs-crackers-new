@@ -104,3 +104,87 @@ input[type="number"] {
 body {
     font-family: Lato, sans-serif !important;
 }
+/* Modern Instruction Popup Styling */
+.instruction-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* dimmed overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Lato', sans-serif;
+}
+
+.popup-content {
+    background-color: #ffffff; /* white background */
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.popup-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.popup-content button {
+    background-color: #6a1b9a; /* purple button */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.popup-content button:hover {
+    background-color: #4a148c; /* darker purple on hover */
+    transform: translateY(-2px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .popup-content {
+        padding: 20px 15px;
+        width: 95%;
+    }
+
+    .popup-content h2 {
+        font-size: 20px;
+    }
+
+    .popup-content p {
+        font-size: 13px;
+    }
+
+    .popup-content button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 14px;
+    }
+}
