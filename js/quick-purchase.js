@@ -1213,42 +1213,42 @@ new Vue({
             doc.text(`${order.email || ''}`, 30, y + 70);
 
             // Account Details Box (right)
-            const boxX = pageWidth - 270;
-            const boxY = y;
-            const boxWidth = 220;
-            const boxHeight = 90;
-            doc.setLineWidth(1);
-            doc.rect(boxX, boxY, boxWidth, boxHeight, 'S');
-            // Vertically center the text block
-            const numLines = 5;
-            const lineHeight = 14;
-            const textBlockHeight = numLines * lineHeight;
-            const topPadding = (boxHeight - textBlockHeight) / 2;
-            let accY = boxY + topPadding + lineHeight - 2;
-            doc.setFont('helvetica', 'bold');
-            doc.text('A/C Name :', boxX + 10, accY);
-            doc.setFont('helvetica', 'normal');
-            doc.text('Sri Sanjeev Agencies', boxX + 90, accY);
-            accY += lineHeight;
-            doc.setFont('helvetica', 'bold');
-            doc.text('A/C Number :', boxX + 10, accY);
-            doc.setFont('helvetica', 'normal');
-            doc.text('50200052459422', boxX + 90, accY);
-            accY += lineHeight;
-            doc.setFont('helvetica', 'bold');
-            doc.text('A/C Type :', boxX + 10, accY);
-            doc.setFont('helvetica', 'normal');
-            doc.text('CURRENT', boxX + 90, accY);
-            accY += lineHeight;
-            doc.setFont('helvetica', 'bold');
-            doc.text('Bank Name :', boxX + 10, accY);
-            doc.setFont('helvetica', 'normal');
-            doc.text('HDFC', boxX + 90, accY);
-            accY += lineHeight;
-            doc.setFont('helvetica', 'bold');
-            doc.text('IFSC Code :', boxX + 10, accY);
-            doc.setFont('helvetica', 'normal');
-            doc.text('HDFC0001860', boxX + 90, accY);
+            // const boxX = pageWidth - 270;
+            // const boxY = y;
+            // const boxWidth = 220;
+            // const boxHeight = 90;
+            // doc.setLineWidth(1);
+            // doc.rect(boxX, boxY, boxWidth, boxHeight, 'S');
+            // // Vertically center the text block
+            // const numLines = 5;
+            // const lineHeight = 14;
+            // const textBlockHeight = numLines * lineHeight;
+            // const topPadding = (boxHeight - textBlockHeight) / 2;
+            // let accY = boxY + topPadding + lineHeight - 2;
+            // doc.setFont('helvetica', 'bold');
+            // doc.text('A/C Name :', boxX + 10, accY);
+            // doc.setFont('helvetica', 'normal');
+            // doc.text('Sri Sanjeev Agencies', boxX + 90, accY);
+            // accY += lineHeight;
+            // doc.setFont('helvetica', 'bold');
+            // doc.text('A/C Number :', boxX + 10, accY);
+            // doc.setFont('helvetica', 'normal');
+            // doc.text('50200052459422', boxX + 90, accY);
+            // accY += lineHeight;
+            // doc.setFont('helvetica', 'bold');
+            // doc.text('A/C Type :', boxX + 10, accY);
+            // doc.setFont('helvetica', 'normal');
+            // doc.text('CURRENT', boxX + 90, accY);
+            // accY += lineHeight;
+            // doc.setFont('helvetica', 'bold');
+            // doc.text('Bank Name :', boxX + 10, accY);
+            // doc.setFont('helvetica', 'normal');
+            // doc.text('HDFC', boxX + 90, accY);
+            // accY += lineHeight;
+            // doc.setFont('helvetica', 'bold');
+            // doc.text('IFSC Code :', boxX + 10, accY);
+            // doc.setFont('helvetica', 'normal');
+            // doc.text('HDFC0001860', boxX + 90, accY);
 
             y += 110; // More vertical space before table
 
@@ -1351,7 +1351,7 @@ new Vue({
             leftY += 28;
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(12);
-            doc.text('Thank you for placing your order', 30, leftY);
+            doc.text('Thank you for placing your enquiry', 30, leftY);
 
             doc.save(`JCSCrackers_Estimate_${order.billNumber || ''}.pdf`);
         },
