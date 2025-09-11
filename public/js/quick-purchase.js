@@ -1434,15 +1434,15 @@ new Vue({
             doc.text(`${order.email || ''}`, customerBoxX + 10, boxY + 112);
 
             // Account Details Box (right) - identical structure and spacing
-            doc.rect(accountBoxX, boxY, boxWidth, boxHeight, 'S');
-            doc.setFont('helvetica', 'bold');
-            doc.text('Account Details', accountBoxX + 10, boxY + 15);
-            doc.setFont('helvetica', 'normal');
-            doc.text('A/C Name : Sri Sanjeev Agencies', accountBoxX + 10, boxY + 30);
-            doc.text('A/C Number : 50200052459422', accountBoxX + 10, boxY + 44);
-            doc.text('A/C Type : CURRENT', accountBoxX + 10, boxY + 58);
-            doc.text('Bank Name : HDFC', accountBoxX + 10, boxY + 72);
-            doc.text('IFSC Code : HDFC0001860', accountBoxX + 10, boxY + 86);
+            // doc.rect(accountBoxX, boxY, boxWidth, boxHeight, 'S');
+            // doc.setFont('helvetica', 'bold');
+            // doc.text('Account Details', accountBoxX + 10, boxY + 15);
+            // doc.setFont('helvetica', 'normal');
+            // doc.text('A/C Name : Sri Sanjeev Agencies', accountBoxX + 10, boxY + 30);
+            // doc.text('A/C Number : 50200052459422', accountBoxX + 10, boxY + 44);
+            // doc.text('A/C Type : CURRENT', accountBoxX + 10, boxY + 58);
+            // doc.text('Bank Name : HDFC', accountBoxX + 10, boxY + 72);
+            // doc.text('IFSC Code : HDFC0001860', accountBoxX + 10, boxY + 86);
 
             y += boxHeight + 30; // Space after both boxes
         
@@ -1667,15 +1667,15 @@ new Vue({
           doc.text(`${order.email || ""}`, customerBoxX + 10, boxY + 86);
 
           // Account Details Box (right) - identical structure and spacing
-          doc.rect(accountBoxX, boxY, boxWidth, boxHeight, "S");
-          doc.setFont("helvetica", "bold");
-          doc.text("Account Details", accountBoxX + 10, boxY + 15);
-          doc.setFont("helvetica", "normal");
-          doc.text("A/C Name : Sri Sanjeev Agencies", accountBoxX + 10, boxY + 30);
-          doc.text("A/C Number : 50200052459422", accountBoxX + 10, boxY + 44);
-          doc.text("A/C Type : CURRENT", accountBoxX + 10, boxY + 58);
-          doc.text("Bank Name : HDFC", accountBoxX + 10, boxY + 72);
-          doc.text("IFSC Code : HDFC0001860", accountBoxX + 10, boxY + 86);
+          // doc.rect(accountBoxX, boxY, boxWidth, boxHeight, "S");
+          // doc.setFont("helvetica", "bold");
+          // doc.text("Account Details", accountBoxX + 10, boxY + 15);
+          // doc.setFont("helvetica", "normal");
+          // doc.text("A/C Name : Sri Sanjeev Agencies", accountBoxX + 10, boxY + 30);
+          // doc.text("A/C Number : 50200052459422", accountBoxX + 10, boxY + 44);
+          // doc.text("A/C Type : CURRENT", accountBoxX + 10, boxY + 58);
+          // doc.text("Bank Name : HDFC", accountBoxX + 10, boxY + 72);
+          // doc.text("IFSC Code : HDFC0001860", accountBoxX + 10, boxY + 86);
 
           y += boxHeight + 30; // Space after both boxes
 
@@ -1836,7 +1836,7 @@ new Vue({
           tableY += 28;
           doc.setFont("helvetica", "normal");
           doc.setFontSize(12);
-          doc.text("Thank you for placing your order", 30, tableY);
+          doc.text("Thank you for placing your enquiry", 30, tableY);
 
           const pdfBase64 = doc.output("datauristring"); // full base64 with prefix
           const pdfFile = pdfBase64.split(",")[1];
