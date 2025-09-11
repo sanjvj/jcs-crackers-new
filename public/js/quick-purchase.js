@@ -716,17 +716,7 @@ new Vue({
                         <p>${order.pincode}</p>
                         <p>${order.mobileNumber}</p>
                         <p><a styles="color: #31018a;text-decoration: none;" href="mailto:${order.email}">${order.email}</a></p>
-                        </td>
-
-                        <!-- Account Box -->
-                        <td style="width: 50%; vertical-align: top; border: 1px solid #ccc; padding: 12px; font-size: 12px;">
-                        <h3 style="margin-top: 0; font-size: 13px; color: #800080;">Account Details</h3>
-                        <p><strong>A/C Name:</strong> Sri Sanjeev Agencies</p>
-                        <p><strong>A/C Number:</strong> 50200052459422</p>
-                        <p><strong>A/C Type:</strong> CURRENT</p>
-                        <p><strong>Bank:</strong> HDFC</p>
-                        <p><strong>IFSC:</strong> HDFC0001860</p>
-                        </td>
+                        
                     </tr>
                     </table>
 
@@ -765,7 +755,7 @@ new Vue({
                   <div class="footer" style="text-align: left;font-size: 12px;margin-top: 10px;"> 
                     ${couponhtml}
                     ${spinhtml}
-                    <p style="">Thank you for placing your order</p>
+                    <p style="">Thank you for placing your enquiry</p>
                   </div>
                 </div>
               </body>
