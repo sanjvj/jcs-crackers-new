@@ -1599,7 +1599,7 @@ new Vue({
             tableY += 28;
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(12);
-            doc.text('Thank you for placing your order', 30, tableY);
+            doc.text('Thank you for placing your enquiry', 30, tableY);
         
             doc.save(`JCSCrackers_Estimate_${order.billNumber || ''}.pdf`);
         },

@@ -90,7 +90,7 @@ exports.getDataFromSheetsApi = functions.https.onCall((data, context) => {
                 reject(err)
             })
     });
-});
+}); 
 
 exports.addDataToSheetsApi = functions.https.onCall((data, context) => {
     return new Promise((resolve, reject) => {
